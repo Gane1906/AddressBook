@@ -5,21 +5,25 @@ namespace AddressBook
     {
         static void Main(String[] args)
         {
-            Address address = new Address();
-            Console.Write("Enter firstName: ");
-            address.firstName = Console.ReadLine();
-            Console.Write("Enter Last Name: ");
-            address.lastName = Console.ReadLine();
-            Console.Write("Enter Address: ");
-            address.address = Console.ReadLine();
-            Console.Write("Enter city: ");
-            address.city = Console.ReadLine();
-            Console.Write("Enter state: ");
-            address.state = Console.ReadLine();
-            Console.Write("Enter phone umber: ");
-            address.phoneNumber = Console.ReadLine();
-            Console.Write("Enter email: ");
-            address.eMail = Console.ReadLine();
+            AddressBookMain add = new AddressBookMain();
+            bool flag = true;
+            while (flag)
+            {
+                Console.Write("1.Add Contact\n2.Display\n3.exit\nEnter your option: ");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch(option)
+                {
+                    case 1:
+                        add.addContact();
+                        break;
+                    case 2:
+                        add.displayContact();
+                        break;
+                    case 3:
+                        flag = false;
+                        break;
+                }
+            }
         }
     }
 }
