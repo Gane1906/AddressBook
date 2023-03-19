@@ -81,5 +81,17 @@ namespace AddressBook
                 }
             }
         }
+        public void deleteContact()
+        {
+            Address address = new Address();
+            Console.WriteLine("Enter name to delete details");
+            String name = Console.ReadLine();
+            foreach(var data in list)
+            {
+                if (data.firstName.Equals(name))
+                    address = data;
+            }
+            list.Remove(address);
+        }
     }
 }
