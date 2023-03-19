@@ -8,10 +8,10 @@ namespace AddressBook
             AddressBookMain add = new AddressBookMain();
             bool flag = true;
             while (flag)
-            {
-                Console.Write("1.Add Contact\n2.Display\n3.exit\nEnter your option: ");
-                int option = Convert.ToInt32(Console.ReadLine());
-                switch(option)
+            {        
+                Console.Write("1.Add Contact\n2.Display\n3.Edit\n4.exit\nEnter your option: ");
+                 int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
                 {
                     case 1:
                         add.addContact();
@@ -20,10 +20,14 @@ namespace AddressBook
                         add.displayContact();
                         break;
                     case 3:
+                        add.editContact();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
             }
         }
     }
+    
 }

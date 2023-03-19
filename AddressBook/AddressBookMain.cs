@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace AddressBook
 {
@@ -34,6 +35,50 @@ namespace AddressBook
             foreach (var address in list)
             {
                 Console.WriteLine(address.firstName + "\n" + address.lastName + "\n" + address.address + "\n" + address.city + "\n" + address.state + "\n" + address.phoneNumber + "\n" + address.eMail);
+            }
+        }
+        public void editContact()
+        {
+            Console.WriteLine("Edit by using First Name: ");
+            String name = Console.ReadLine();
+            foreach(var data in list)
+            {
+                if (data.firstName == name)
+                {
+                    Console.WriteLine("Enter option to edit:\n1.First Name\n2.Second Name\n3.Address\n4.city\n5.state\n6.phone number\n7.email");
+                    int option = Convert.ToInt32(Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            Console.WriteLine("Enter first name ");
+                            data.firstName = Console.ReadLine();
+                            break;
+                        case 2:
+                            Console.WriteLine("Enter last number ");
+                            data.lastName = Console.ReadLine();
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter address");
+                            data.address = Console.ReadLine();
+                            break;
+                        case 4:
+                            Console.WriteLine("Enter city");
+                            data.city = Console.ReadLine();
+                            break;
+                        case 5:
+                            Console.WriteLine("Enter state");
+                            data.state = Console.ReadLine();
+                            break;
+                        case 6:
+                            Console.WriteLine("Enter phne number");
+                            data.phoneNumber = Console.ReadLine();
+                            break;
+                        case 7:
+                            Console.WriteLine("Enter email");
+                            data.eMail = Console.ReadLine();
+                            break;
+                    }
+                }
             }
         }
     }
