@@ -10,7 +10,7 @@ namespace AddressBook
     public class AddressBookMain
     {
         
-        List<Address> list = new List<Address>();
+        List<Address> addressList = new List<Address>();
         public void addContact()
         {
             Address address = new Address();
@@ -28,7 +28,7 @@ namespace AddressBook
             address.phoneNumber = Console.ReadLine();
             Console.Write("Enter email: ");
             address.eMail = Console.ReadLine();
-            list.Add(address);
+            addressList.Add(address);
        }
         public void displayContact()
         {
