@@ -9,7 +9,7 @@ namespace AddressBook
             bool flag = true;
             while (flag)
             {        
-                Console.Write("1.Add Contact\n2.Display\n3.search by city\n4search by state\n5.exit\nEnter your option: ");
+                Console.Write("1.Add Contact\n2.Display\n3.search by city\n4.search by state\n5.exit\nEnter your option: ");
                  int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
