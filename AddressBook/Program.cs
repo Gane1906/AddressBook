@@ -5,27 +5,21 @@ namespace AddressBook
     {
         static void Main(String[] args)
         {
-            AddressBookMain add = new AddressBookMain();
+            AddressBookDictonary dict = new AddressBookDictonary();
             bool flag = true;
             while (flag)
             {        
-                Console.Write("1.Add Contact\n2.Display\n3.Edit\n4.delete\n5.exit\nEnter your option: ");
+                Console.Write("1.Add Contact\n2.Display\n3.Exit\nEnter your option: ");
                  int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
-                        add.addContact();
+                        dict.AddAddress();
                         break;
                     case 2:
-                        add.displayContact();
+                        dict.Display();
                         break;
                     case 3:
-                        add.editContact();
-                        break;
-                    case 4:
-                        add.deleteContact();
-                        break;
-                    case 5:
                         flag = false;
                         break;
                 }

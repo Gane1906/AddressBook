@@ -9,10 +9,10 @@ namespace AddressBook
 {
     public class AddressBookMain
     {
-        
-        List<Address> addressList = new List<Address>();
+        List<Address> list = new List<Address>();
         public void addContact()
         {
+            //List<Address> list = new List<Address>();
             Address address = new Address();
             Console.Write("Enter firstName: ");
             address.firstName = Console.ReadLine();
@@ -28,13 +28,13 @@ namespace AddressBook
             address.phoneNumber = Console.ReadLine();
             Console.Write("Enter email: ");
             address.eMail = Console.ReadLine();
-            addressList.Add(address);
+            list.Add(address);
        }
         public void displayContact()
         {
-            foreach (var address in list)
+            foreach(var data in list)
             {
-                Console.WriteLine(address.firstName + "\n" + address.lastName + "\n" + address.address + "\n" + address.city + "\n" + address.state + "\n" + address.phoneNumber + "\n" + address.eMail);
+                Console.WriteLine(data.firstName+"\t"+data.lastName+"\t"+data.address+"\t"+data.city+"\t"+data.state+"\t"+data.phoneNumber+"\t"+data.eMail);
             }
         }
         public void editContact()
