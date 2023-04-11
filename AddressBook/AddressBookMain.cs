@@ -24,7 +24,7 @@ namespace AddressBook
             address.city = Console.ReadLine();
             Console.Write("Enter state: ");
             address.state = Console.ReadLine();
-            Console.Write("Enter phone umber: ");
+            Console.Write("Enter phone number: ");
             address.phoneNumber = Console.ReadLine();
             Console.Write("Enter email: ");
             address.eMail = Console.ReadLine();

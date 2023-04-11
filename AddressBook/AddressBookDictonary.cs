@@ -71,7 +71,6 @@ namespace AddressBook
                 foreach (var value in addressList[key].Where(v=>v.state.Equals(state)).ToList())
                 {
                     Console.WriteLine(value.firstName + "\t" + value.lastName + "\t" + value.address + "\t" + value.city + "\t" + value.state + "\t" + value.phoneNumber + "\t" + value.eMail);
-
                 }
             }
         }
